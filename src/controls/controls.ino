@@ -6,6 +6,7 @@
 #define DIRB 7
 
 #define CH1_PIN 2
+#define CH2_PIN 3
 #define P_TIMEOUT 40000
 
 #define CH_MIN 980
@@ -59,7 +60,7 @@ void runMotor(int PWMThrottlePin, int ReversePin, int value) {
 void loop(){
    
   runMotor(PWMA, DIRA, readAndGetOutput(CH1_PIN));
-
+  runMotor(PWMB, DIRB, readAndGetOutput(CH2_PIN));
   
   
   //Serial.println(v1);
